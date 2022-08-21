@@ -15,6 +15,6 @@
 
 ## **API Specifications**
 
-### -저장 API ****
+### -저장 API 
 
--상세 조회 API
+### -상세 조회 API
