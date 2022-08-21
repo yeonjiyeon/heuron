@@ -9,8 +9,14 @@
 - REST API
 - Java 1.8
 - Spring Boot
-- 데이터 베이스 자유
+- 데이터 베이스 자유 선택
 
+
+
+## 프로젝트 사용 기술
+- Java 1.8
+- Spring Boot
+- H2
 
 
 ## **API Specifications**
