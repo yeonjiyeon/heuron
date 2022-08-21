@@ -8,7 +8,7 @@
 
 - REST API
 - Java 1.8
-- Spring Boot
+- Spring Boot 2.7.3
 - 데이터 베이스 자유 선택
 
 
