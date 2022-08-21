@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Builder
 @Entity
 @Getter
 public class Patient {
@@ -25,9 +24,22 @@ public class Patient {
 
   private int patientAge;
 
-  private String imgName;
+  private PatientGender patientGender;
 
-  private String imgPath;
+  private boolean hasDisease;
+
+  private String imageName;
+
+  private String imagePath;
+
+  @Builder
+  public Patient(String patientName, int patientAge, PatientGender patientGender,
+      boolean hasDisease) {
+    this.patientName = patientName;
+    this.patientAge = patientAge;
+    this.patientGender = patientGender;
+    this.hasDisease = hasDisease;
+  }
 
 
 }
