@@ -25,9 +25,13 @@ public class Patient {
 
   private int patientAge;
 
-  private String imgName;
+  private PatientGender patientGender;
 
-  private String imgPath;
+  private boolean hasDisease;
+
+  private String imageName;
+
+  private String imagePath;
 
 
 }
