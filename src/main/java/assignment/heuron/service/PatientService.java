@@ -5,12 +5,13 @@ import assignment.heuron.domain.Patient;
 import assignment.heuron.dto.request.PatientRequest;
 import assignment.heuron.dto.response.PatientResponse;
 import java.io.IOException;
+import org.springframework.web.multipart.MultipartFile;
 
 
 public interface PatientService {
 
   //저장 API
-  public Long savePatient(PatientRequest patientRequest) throws IOException;
+  public Long savePatient(PatientRequest patientRequest, MultipartFile imageFile) throws IOException;
 
 
   //상세조회 API
