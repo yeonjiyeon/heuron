@@ -19,6 +19,8 @@ public class PatientRequest {
 
   private boolean hasDisease;
 
+  private String imagePath;
+
   private MultipartFile patientImage;
 
   public Patient toEntity() {

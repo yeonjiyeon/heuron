@@ -19,7 +19,7 @@ public class PatientController {
   private final PatientService patientService;
 
   @PostMapping("/patient")
-  public ResponseEntity<Long> savePatient(@RequestBody PatientRequest patientRequest)
+  public ResponseEntity<Long> savePatient(PatientRequest patientRequest)
       throws IOException {
     Long savePatientID = patientService.savePatient(patientRequest);
 
