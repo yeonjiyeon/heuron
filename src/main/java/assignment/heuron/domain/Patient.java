@@ -41,7 +41,7 @@ public class Patient {
     this.hasDisease = hasDisease;
   }
 
-  
+
   public void updateImageInfo(String imageName) {
     this.imageName = imageName;
     this.imagePath = "/files/" + imageName;
