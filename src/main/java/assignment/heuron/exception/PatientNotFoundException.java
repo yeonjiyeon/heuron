@@ -1,2 +1,5 @@
-package assignment.heuron.exception;public class PatientNotFoundException {
+package assignment.heuron.exception;
+
+public class PatientNotFoundException extends RuntimeException{
+
 }
