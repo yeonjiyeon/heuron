@@ -10,6 +10,7 @@ import java.io.IOException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 @Service
 @RequiredArgsConstructor
@@ -22,10 +23,10 @@ public class PatientServiceImpl implements PatientService {
 
   //저장 API
   @Override
-  public Long savePatient(PatientRequest patientRequest) throws IOException {
+  public Long savePatient(PatientRequest patientRequest, MultipartFile imageFile) throws IOException {
     Patient patient = dtoToEntity(patientRequest);
-    if (patientRequest.getPatientImage() != null) {
-      String imageName = fileService.uploadFile(patientRequest.getPatientImage());
+    if (imageFile != null) {
+      String imageName = fileService.uploadFile(imageFile);
       patient.updateImageInfo(imageName);
       patient.updateSaveLevel(SaveLevel.LEVEL2);
     }

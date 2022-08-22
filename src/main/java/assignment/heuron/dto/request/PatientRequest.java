@@ -19,6 +19,4 @@ public class PatientRequest {
 
   private boolean hasDisease;
 
-  private MultipartFile patientImage;
-
 }
