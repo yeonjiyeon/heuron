@@ -19,17 +19,6 @@ public class PatientRequest {
 
   private boolean hasDisease;
 
-  private String imagePath;
-
   private MultipartFile patientImage;
 
-  public Patient toEntity() {
-    Patient patient = Patient.builder()
-        .patientName(patientName)
-        .patientGender(patientGender)
-        .hasDisease(hasDisease)
-        .build();
-
-    return patient;
-  }
 }

@@ -1,6 +1,7 @@
 package assignment.heuron.dto.response;
 
 import assignment.heuron.domain.PatientGender;
+import assignment.heuron.domain.SaveLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class PatientResponse {
+
   private String patientName;
 
   private int patientAge;
@@ -19,5 +21,12 @@ public class PatientResponse {
 
   private boolean hasDisease;
 
-  private boolean hasImage;
+  private SaveLevel saveLevel;
+
+  private String imagePath;
+
+
+
+
+
 }
