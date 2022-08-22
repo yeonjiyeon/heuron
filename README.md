@@ -22,5 +22,7 @@
 ## **API Specifications**
 
 ### -저장 API 
+![image](https://user-images.githubusercontent.com/69364279/185926929-bf1748a0-2baf-4241-87d9-664a9f511db6.png)
+
 
 ### -상세 조회 API
