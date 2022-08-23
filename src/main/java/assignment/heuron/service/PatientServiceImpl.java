@@ -109,4 +109,12 @@ public class PatientServiceImpl implements PatientService {
   }
 
 
+  //삭제 API
+  @Override
+  public void deletePatient(Long patientId) {
+    Patient patient = patientRepository.findById(patientId).orElse(null);
+    patientRepository.delete(patient);
+  }
+
+
 }

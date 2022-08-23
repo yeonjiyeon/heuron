@@ -21,6 +21,10 @@ public interface PatientService {
   public byte[] readImage(String imagePath) throws Exception;
 
 
+  //삭제 API
+  public void deletePatient(Long patientId);
+
+
   //dto -> entity
   default public Patient dtoToEntity(PatientRequest patientRequest) {
     Patient patient = Patient.builder()

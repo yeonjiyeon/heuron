@@ -52,7 +52,7 @@ public class Patient {
 
   public void updateImageInfo(String imageName) {
     this.imageName = imageName;
-    this.imagePath = "/files/" + imageName;
+    this.imagePath = "/api/v1/image/" + imageName;
   }
 
   //저장 단계 수정
