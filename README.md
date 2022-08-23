@@ -30,7 +30,8 @@
 ### -상세 조회 API
 
 - Level1일 때 조회
-NotLevelTwoException이 발생합니다.
+![image](https://user-images.githubusercontent.com/69364279/186096793-4fa3d75e-bb42-47ad-9bf4-4d3a1ff9945e.png)
+
 
 - Level2(이미지가 존재할 때)일 때 조회
 ![image](https://user-images.githubusercontent.com/69364279/186044445-8fd5d844-0d61-4d37-8cf3-be9e6f1cf05c.png)
