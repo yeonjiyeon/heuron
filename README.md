@@ -31,7 +31,9 @@
 - Level1일 때 조회
 
 
-- Level2일 때 조회
+- Level2(이미지가 존재할 때)일 때 조회
+![image](https://user-images.githubusercontent.com/69364279/186044445-8fd5d844-0d61-4d37-8cf3-be9e6f1cf05c.png)
+
 
 ### -이미지 조회 API
 ![image](https://user-images.githubusercontent.com/69364279/186042971-3f9b54b8-5bd6-47dd-9135-3c15e57feb4a.png)
