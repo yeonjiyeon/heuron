@@ -18,6 +18,7 @@
 - Java 1.8
 - Spring Boot
 - H2
+- Spring Data JPA
 </br>
 
 ## **API Specifications**
@@ -29,7 +30,7 @@
 ### -상세 조회 API
 
 - Level1일 때 조회
-
+NotLevelTwoException이 발생합니다.
 
 - Level2(이미지가 존재할 때)일 때 조회
 ![image](https://user-images.githubusercontent.com/69364279/186044445-8fd5d844-0d61-4d37-8cf3-be9e6f1cf05c.png)
