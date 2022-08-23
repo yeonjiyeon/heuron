@@ -52,7 +52,7 @@ patientRequest
 
 </br>
 
-### -상세 조회 API GET http://localhost:8080/api/v1/patient/{patientId}
+### -상세 조회 API GET http://localhost:8080/api/v1/patient/{id}
 - 레벨 측정 메서드를 만들어 레벨 측정후 1단계면 메시지를 뿌려주고, 2단계면 환자 조회가 가능하도록 해주었습니다.
 
 - Level1일 때 조회  
@@ -75,7 +75,7 @@ patientRequest
 
 </br>
 
-### - 삭제 API DELETE http://localhost:8080/api/v1/patient/{patientId}
+### - 삭제 API DELETE http://localhost:8080/api/v1/patient/{id}
 ![image](https://user-images.githubusercontent.com/69364279/186047520-7c00c783-9080-4476-a167-51455dee7206.png)
 </br>
 삭제후 삭제 아이디값을 반환합니다. 
