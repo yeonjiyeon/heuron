@@ -40,3 +40,7 @@
 
 
 ### - 삭제 API
+![image](https://user-images.githubusercontent.com/69364279/186047520-7c00c783-9080-4476-a167-51455dee7206.png)
+
+
+
