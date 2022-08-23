@@ -1,4 +1,4 @@
-package assignment.heuron.service;
+package assignment.heuron.controller;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 @Transactional
-class PatientServiceImplTest {
+class PatientControllerTest {
 
 }
