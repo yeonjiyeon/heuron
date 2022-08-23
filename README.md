@@ -53,7 +53,7 @@ patientRequest
 </br>
 
 ### -상세 조회 API GET http://localhost:8080/api/v1/patient/{patientId}
-- 레벨 측정 메서드를 만들어 레벨 측정후 1단계면 메시지를 뿌려주고, 2단계면 환자 조회가 가능하도록 해줍니다.
+- 레벨 측정 메서드를 만들어 레벨 측정후 1단계면 메시지를 뿌려주고, 2단계면 환자 조회가 가능하도록 해주었습니다.
 
 - Level1일 때 조회  
 ![image](https://user-images.githubusercontent.com/69364279/186096793-4fa3d75e-bb42-47ad-9bf4-4d3a1ff9945e.png)
