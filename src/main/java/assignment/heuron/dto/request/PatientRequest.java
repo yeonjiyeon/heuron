@@ -1,11 +1,9 @@
 package assignment.heuron.dto.request;
 
-import assignment.heuron.domain.Patient;
 import assignment.heuron.domain.PatientGender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.web.multipart.MultipartFile;
 
 @NoArgsConstructor
 @AllArgsConstructor

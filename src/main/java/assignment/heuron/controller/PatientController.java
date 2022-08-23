@@ -1,7 +1,6 @@
 package assignment.heuron.controller;
 
 
-import assignment.heuron.domain.Patient;
 import assignment.heuron.dto.request.PatientRequest;
 import assignment.heuron.dto.response.PatientResponse;
 import assignment.heuron.service.PatientService;
@@ -13,12 +12,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+
 
 @RequiredArgsConstructor
 @RequestMapping("/api/v1")
@@ -27,10 +25,11 @@ public class PatientController {
 
   private final PatientService patientService;
 
+
   @PostMapping(value = "/patient", consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE})
   public ResponseEntity<Long> savePatient(@RequestPart PatientRequest patientRequest, @RequestPart(required = false)
       MultipartFile imageFile)
-      throws IOException {
+      throws Exception {
     Long savePatientID;
 
     if(imageFile == null) savePatientID = patientService.savePatient(patientRequest, null);
@@ -46,6 +45,14 @@ public class PatientController {
     PatientResponse patientResponse = patientService.readDetailPatient(id);
     return new ResponseEntity<>(patientResponse, HttpStatus.OK);
   }
+
+  @GetMapping(value = "/image/{imageName}", produces = MediaType.IMAGE_JPEG_VALUE)
+  public ResponseEntity<byte[]> userSearch(@PathVariable("imageName") String imageName)
+      throws Exception {
+    byte[] imageByteArray = patientService.readImage(imageName);
+    return new ResponseEntity<byte[]>(imageByteArray, HttpStatus.OK);
+  }
+
 
 
 }
