@@ -4,7 +4,8 @@ import assignment.heuron.domain.Patient;
 import assignment.heuron.domain.SaveLevel;
 import assignment.heuron.dto.request.PatientRequest;
 import assignment.heuron.dto.response.PatientResponse;
-import assignment.heuron.exception.PatientNotFoundException;
+import assignment.heuron.exception.CustomException;
+import assignment.heuron.exception.ErrorCode;
 import assignment.heuron.repository.PatientRepository;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -13,6 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -58,9 +60,10 @@ public class PatientServiceImpl implements PatientService {
   }
 
   //저장 단계 검사
-  public void validationLevel(Patient patient){
-    if(!patient.isLevelTwo(patient.getSaveLevel())){
-      throw new ArithmeticException("사진 등록 후 조회 가능합니다.");
+  public void validationLevel(Patient patient) {
+    if (!patient.isLevelTwo(patient.getSaveLevel())) {
+      throw new CustomException(HttpStatus.NOT_FOUND,
+          ErrorCode.ImageNotFoundException.getMessage());
     }
   }
 
@@ -69,7 +72,9 @@ public class PatientServiceImpl implements PatientService {
   @Override
   public PatientResponse readDetailPatient(Long patientId) {
     Patient patient = patientRepository.findById(patientId)
-        .orElseThrow(() -> new PatientNotFoundException("해당 환자가 존재하지 않습니다."));
+        .orElseThrow(
+            () -> new CustomException(HttpStatus.NOT_FOUND, ErrorCode.PatientNotFoundException
+                .getMessage()));
     validationLevel(patient);
     PatientResponse patientResponse = entityToDTO(patient);
     return patientResponse;
@@ -114,7 +119,9 @@ public class PatientServiceImpl implements PatientService {
   @Override
   public void deletePatient(Long patientId) {
     Patient patient = patientRepository.findById(patientId)
-        .orElseThrow(() -> new PatientNotFoundException("해당 환자가 존재하지 않습니다."));
+        .orElseThrow(
+            () -> new CustomException(HttpStatus.NOT_FOUND, ErrorCode.PatientNotFoundException
+                .getMessage()));
     patientRepository.delete(patient);
   }
 

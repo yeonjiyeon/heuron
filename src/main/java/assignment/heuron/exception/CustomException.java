@@ -1,14 +1,18 @@
 package assignment.heuron.exception;
 
-public class CustomException extends RuntimeException{
-  private final ErrorCode errorCode;
+import lombok.Getter;
+import org.springframework.http.HttpStatus;
 
-  public CustomException(ErrorCode errorCode) {
-    this.errorCode = errorCode;
-  }
+@Getter
+public class CustomException extends RuntimeException {
 
-  public CustomException(ErrorCode errorCode, String message) {
-    super(message);
-    this.errorCode = errorCode;
+  private final HttpStatus httpStatus;
+  private final String message;
+
+
+
+  public CustomException(HttpStatus httpStatus, String message) {
+    this.httpStatus = httpStatus;
+    this.message = message;
   }
 }
