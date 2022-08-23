@@ -11,7 +11,7 @@
 
 - REST API
 - Java 1.8
-- Spring Boot 2.7.3
+- Spring Boot 
 - 데이터 베이스 자유 선택
 </br>
 </br>
@@ -19,9 +19,10 @@
 
 ## 프로젝트 사용 기술
 - Java 1.8
-- Spring Boot
+- Spring Boot 2.7.3
 - H2
 - Spring Data JPA
+- Git(Git Flow 브랜치 전략을 사용했습니다.)
 </br>
 </br>
 
