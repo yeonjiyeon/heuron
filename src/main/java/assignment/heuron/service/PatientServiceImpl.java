@@ -1,5 +1,6 @@
 package assignment.heuron.service;
 
+import assignment.heuron.domain.Patient;
 import assignment.heuron.domain.SaveLevel;
 import assignment.heuron.dto.request.PatientRequest;
 import assignment.heuron.dto.response.PatientResponse;

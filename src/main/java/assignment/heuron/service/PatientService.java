@@ -1,6 +1,7 @@
 package assignment.heuron.service;
 
 
+import assignment.heuron.domain.Patient;
 import assignment.heuron.dto.request.PatientRequest;
 import assignment.heuron.dto.response.PatientResponse;
 import org.springframework.web.multipart.MultipartFile;
