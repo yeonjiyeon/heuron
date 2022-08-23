@@ -29,6 +29,7 @@ public interface PatientService {
   default public Patient dtoToEntity(PatientRequest patientRequest) {
     Patient patient = Patient.builder()
         .patientName(patientRequest.getPatientName())
+        .patientAge(patientRequest.getPatientAge())
         .patientGender(patientRequest.getPatientGender())
         .hasDisease(patientRequest.isHasDisease())
         .build();

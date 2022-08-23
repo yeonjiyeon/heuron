@@ -4,6 +4,7 @@ import assignment.heuron.domain.Patient;
 import assignment.heuron.domain.SaveLevel;
 import assignment.heuron.dto.request.PatientRequest;
 import assignment.heuron.dto.response.PatientResponse;
+import assignment.heuron.exception.PatientNotFoundException;
 import assignment.heuron.repository.PatientRepository;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -57,19 +58,19 @@ public class PatientServiceImpl implements PatientService {
   }
 
   //저장 단계 검사
-  /*public void validationLevel(Patient patient){
+  public void validationLevel(Patient patient){
     if(!patient.isLevelTwo(patient.getSaveLevel())){
-      //true가 아니라면 에러 발생
+      throw new ArithmeticException("사진 등록 후 조회 가능합니다.");
     }
-  }*/
-
+  }
 
 
   //상세조회 API
   @Override
   public PatientResponse readDetailPatient(Long patientId) {
-    Patient patient = patientRepository.findById(patientId).orElse(null);
-    //validationLevel(patient);
+    Patient patient = patientRepository.findById(patientId)
+        .orElseThrow(() -> new PatientNotFoundException("해당 환자가 존재하지 않습니다."));
+    validationLevel(patient);
     PatientResponse patientResponse = entityToDTO(patient);
     return patientResponse;
   }
@@ -112,7 +113,8 @@ public class PatientServiceImpl implements PatientService {
   //삭제 API
   @Override
   public void deletePatient(Long patientId) {
-    Patient patient = patientRepository.findById(patientId).orElse(null);
+    Patient patient = patientRepository.findById(patientId)
+        .orElseThrow(() -> new PatientNotFoundException("해당 환자가 존재하지 않습니다."));
     patientRepository.delete(patient);
   }
 
