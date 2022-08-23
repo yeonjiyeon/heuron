@@ -66,12 +66,14 @@ imageFile
 
 ### -이미지 조회 API GET http://localhost:8080/api/v1/image/{imageName}
 ![image](https://user-images.githubusercontent.com/69364279/186042971-3f9b54b8-5bd6-47dd-9135-3c15e57feb4a.png)
+</br>
 해당 URL로 이미지 확인이 가능합니다. 
 
 </br>
 
 ### - 삭제 API DELETE http://localhost:8080/api/v1/patient/{patientId}
 ![image](https://user-images.githubusercontent.com/69364279/186047520-7c00c783-9080-4476-a167-51455dee7206.png)
+</br>
 삭제후 삭제 아이디값을 반환합니다. 
 
 
