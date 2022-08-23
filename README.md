@@ -34,5 +34,7 @@
 - Level2일 때 조회
 
 ### -이미지 조회 API
+![image](https://user-images.githubusercontent.com/69364279/186042971-3f9b54b8-5bd6-47dd-9135-3c15e57feb4a.png)
+
 
 ### - 삭제 API
